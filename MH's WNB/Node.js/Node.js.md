@@ -20,3 +20,7 @@
 
 ### 실행
 - 터미널에서 > node \[package.json에서 main 으로 설정한 파일명] 
+- 종료는 터미널에서 > ctrl + c
+- 수정 후 확인 시 매번 서버를 껐다 켜기 불편하므로 도와주는 라이브러리 설치함
+	- npm install -g nodemon
+	- server 실행시 > nodemon \[package.json에서 main 으로 설정한 파일명] 
