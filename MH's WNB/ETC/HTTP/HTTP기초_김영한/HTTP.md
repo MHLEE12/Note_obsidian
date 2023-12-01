@@ -104,4 +104,30 @@
 	- 캐시가능(Cacheable Methods)
 		- GET, HEAD, POST, PATCH가 캐시 가능하지만 실제로는 GET, HEAD만 캐시로 사용
 - 활용
-	- Client -> Server 데이터 전송
+	- Client -> Server 데이터 전송 전달 방식
+		- 쿼리 파라미터
+		- 메세지 바디를 통한 전송
+	- POST: client는 등록될 리소스의 URI를 모른다. server가 생성해줌
+	- Collection
+		- 서버가 관리하는 리소스 디렉토리
+		- 리소스의 URI를 생성하고 관리하는 것은 server
+	- PUT: client가 리소스 URI를 지정함.
+	- Store
+		- client가 관리하는 리소스 저장소
+		- cilent가 리소스의 URI를 알고 관리
+- HTML FORM
+	- GET, POST만 지원함
+	- AJAX 같은 기술을 사용해서 해결 가능
+
+# HTTP 상태 코드
+### 4XX (Client Error)
+- 오류의 원인이 client에 있음(잘못된 문법 사용 같은 요청에 오류가 있을 때)
+- client가 잘못된 요청, 데이터를 보내서 생긴 오류이므로 여러 번 시도해도 계속해서 실패함
+### 5XX (Server Error)
+- 서버에 문제가 생겨서 발생한 에러로 재시도하면 성공할 수 있음
+- 왠만하면 5XX에러가 나오지 않게 해야 함. 서버에 문제가 있는 것 말고는 5XX 에러가 나오지 않게 해야 함
+
+# 쿠키
+- Set-Cookie: server -> client 로 쿠키 전달(응답)
+- Cookie: client가 server에서 준 쿠키를 저장하고 HTTP 요청시 server로 전달
+
